@@ -1,6 +1,12 @@
 const templateVars = ['title', 'description', 'subtitle', 'location', 'date', 'cfp-deadline', 'cfp-url', 'themes', 'formats'];
 const templateVar = {}
 
+let slackid = "";
+const params = new URLSearchParams(window.location.search)
+if (params.has('slackId')) {
+    slackId = params.get('slackId')
+}
+
 for (const iterator of templateVars) {
     templateVar[iterator] = document.querySelector(`#section-preview [data-id=${iterator}]`);
 }
@@ -131,6 +137,6 @@ function generateUrl() {
             },
         ]
     };
-    const url = `https://app.slack.com/block-kit-builder/T016M3G1GHZ#${JSON.stringify(template)}`;
+    const url = `https://app.slack.com/block-kit-builder/${slackId}#${JSON.stringify(template)}`;
     return url;
 }
