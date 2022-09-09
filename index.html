@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFP announcement generator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container flex flex-direction-row flex-direction-1024-column justify-content-center">
+        <section id="section-form">
+            <form id="form">
+                <div class="flex flex-direction-column gap-1 flex-direction-1024-row flex-direction-480-column">
+                    <div class="flex-1">
+                        <label for="title">Title</label>
+                        <input type="text" data-id="title" placeholder="title" />
+                    </div>
+                    <div class="flex-1">
+                        <label for="subtitle">Subtitle</label>
+                        <input type="text" data-id="subtitle" placeholder="http://myconferenceurl.com" />
+                    </div>
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <textarea rows="5" data-id="description"></textarea>
+                </div>
+                <div class="flex flex-direction-column gap-1 flex-direction-1024-row flex-direction-480-column">
+                    <div class="flex-1">
+                        <label for="location">Location</label>
+                        <input type="text" data-id="location" placeholder="location" />
+                    </div>
+                    <div class="flex-1">
+                        <label for="tidatetle">Date</label>
+                        <input type="text" data-id="date" placeholder="Oct. 15 - Oct. 18 2022" />
+                    </div>
+                </div>
+                <div class="flex flex-direction-column gap-1 flex-direction-1024-row flex-direction-480-column">
+                    <div class="flex-1">
+                        <label for="cfp-deadline">CFP deadline</label>
+                        <input type="text" data-id="cfp-deadline" placeholder="Jul. 31 2022" />
+                    </div>
+                    <div class="flex-1">
+                        <label for="cfp-url">CFP URL</label>
+                        <input type="text" data-id="cfp-url" placeholder="http://cfp.myconferenceurl.com" />
+                    </div>
+                </div>
+                <div class="flex flex-direction-column gap-1 flex-direction-1024-row flex-direction-480-column">
+                    <div class="flex-1">
+                        <label for="themes">Themes</label>
+                        <textarea type="text" data-id="themes"
+                            placeholder="Java, Serverless, Web, Cloud, ..."></textarea>
+                    </div>
+                    <div class="flex-1">
+                        <label for="formats">Formats</label>
+                        <textarea type="text" data-id="formats"
+                            placeholder="lightning talk, session, workshop, ..."></textarea>
+                    </div>
+                </div>
+                <div class="flex justify-content-center">
+                    <input type="button" value="Generate template" id="submit">
+                </div>
+            </form>
+        </section>
+
+
+
+        <section id="section-preview" class="flex flex-direction-column">
+            <img src="assets/images/slack-template.png" title="template background slack"
+                alt="template background slack" />
+                <div class="design">
+            <div class="container">
+                <h3 class="header">
+                    <div data-id="title"></div>
+                </h3>
+                <div class="subtitle flex flex-wrap-wrap flex-direction-row">
+                    <div data-id="subtitle"></div>
+                </div>
+                <div class="description white-space-pre-wrap" data-id="description">
+                </div>
+                <div class="flex flex-direction-row">
+                    <div class="data-block">
+                        <div class="label">Location</div>
+                        <div class="value" data-id="location"></div>
+                    </div>
+                    <div class="data-block">
+                        <div class="label">Dates</div>
+                        <div class="value" data-id="date"></div>
+                    </div>
+                </div>
+                <div class="data-block-wrapper flex flex-direction-row">
+                    <div class="data-block">
+                        <div class="label">CFP Deadline</div>
+                        <div class="value" data-id="cfp-deadline"></div>
+                    </div>
+                    <div class="data-block">
+                        <div class="label">CFP</div>
+                        <div class="value"><a href="" data-id="cfp-url" target="_blank">Click here</a></div>
+                    </div>
+                </div>
+                <div class="flex flex-direction-row">
+                    <div class="data-block">
+                        <div class="label">Themes</div>
+                        <div class="value white-space-pre-wrap" data-id="themes"></div>
+                    </div>
+                    <div class="data-block">
+                        <div class="label">Formats</div>
+                        <div class="value white-space-pre-wrap" data-id="formats"></div>
+                    </div>
+                </div>
+                <button class="button margin-top-1">Submit a talk</a>
+            </div>
+        </div>
+        </section>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script> -->
+    <script src="app.js"></script>
+</body>
+
+</html>

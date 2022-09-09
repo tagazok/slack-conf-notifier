@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #1d1c1d;
+    --link-color: #1264a3;
+    --subtitle-color: #616061;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(assets/fonts/Lato-Reg.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(assets/fonts/Lato-Bol.ttf);
+    font-weight: bold;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+input[type="text"],
+textarea {
+    margin: 0em;
+    width: 100%;
+    margin-bottom: .4rem;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: .4em;
+    border-width: 1px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+input[type="button"] {
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    border: solid 1px #007bff;
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flew-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.white-space-pre-wrap {
+    white-space: pre-wrap;
+}
+
+.margin-top-1 {
+    margin-top: 1em;
+}
+
+#section-form {
+    padding: 1em;
+}
+
+#section-form #form label {
+    font-size: .8em;
+    font-weight: bold;
+    color: #4a5568;
+    text-transform: uppercase;
+}
+
+#section-preview {
+    /* width: 800px;
+    max-width: 100%; */
+    /* width: 100%; */
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--primary-color);
+    /* background-image: url("/assets/images/slack-template.png");
+    background-size: contain; */
+    position: relative;
+}
+
+#section-preview img {
+    /* max-width: 100%; */
+    width: 100%;
+    max-width: 1024px;
+}
+
+#section-preview .design {
+    width: 100%;
+    max-width: 1024px;
+    position: absolute;
+}
+#section-preview .container {
+    aspect-ratio: 2/1.23;
+    background-color: #f8f8f8;
+    position: absolute;
+    left: 31.3%;
+    right: 4.1%;
+    margin-top: 14%;
+    height: auto;
+    overflow-y: auto;
+    font-size: calc(0.25em + 1vw);
+}
+
+#section-preview .header {
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 1.33334;
+    margin: .3em 0 4px;
+    width: 100%;
+}
+
+#section-preview .header img {
+    height: auto;
+    width: 1em;
+}
+
+#section-preview .subtitle {
+    font-size: .8em;
+    line-height: 1.38463;
+}
+
+#section-preview .subtitle .event-type {
+    color: var(--subtitle-color);
+    font-weight: bold;
+}
+
+#section-preview .description {
+    line-height: 1.46668;
+    margin: 8px 0 4px;
+}
+
+#section-preview .data-block-wrapper {
+    margin: 8px 0 4px;
+}
+
+#section-preview .data-block {
+    /* width: calc(50% - 16px); */
+    flex: 0 0 50%;
+}
+
+#section-preview .data-block .label {
+    font-weight: bold;
+}
+
+#section-preview button.button {
+    border: 1px solid #007a5a4d;
+    color: #007a5a;
+    font-weight: 700;
+    padding: 0 8px 1px;
+    height: 28px;
+    min-width: 56px;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .flex-direction-1024-column {
+        flex-direction: column;
+    }
+
+    .flex-direction-1024-row {
+        flex-direction: row;
+    }
+
+    .gap-1 {
+        gap: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .flex-direction-480-column {
+        flex-direction: column;
+    }
+}
