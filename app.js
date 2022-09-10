@@ -1,7 +1,7 @@
 const templateVars = ['title', 'description', 'subtitle', 'location', 'date', 'cfp-deadline', 'cfp-url', 'themes', 'formats'];
 const templateVar = {}
 
-let slackid = "";
+let slackId = "";
 const params = new URLSearchParams(window.location.search)
 if (params.has('slackId')) {
     slackId = params.get('slackId')
