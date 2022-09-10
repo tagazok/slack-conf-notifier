@@ -176,11 +176,26 @@ input[type="button"] {
     color: #007a5a;
     font-weight: 700;
     padding: .3em;
-    /* height: 28px; */
     min-width: 56px;
     border-radius: 4px;
     font-size: inherit;
 }
+
+.footer {
+    color: #808080;
+    text-align: center;
+}
+
+
+.footer .heart {
+    color: red;
+}
+
+.footer .heart a {
+        color: #3f51b5;
+        text-decoration: none;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .flex-direction-1024-column {
