@@ -127,7 +127,7 @@ input[type="button"] {
     margin-top: 14%;
     height: auto;
     overflow-y: auto;
-    font-size: calc(0.25em + 1vw);
+    font-size: min(calc(0.25em + 1vw), 15px);
 }
 
 #section-preview .header {
