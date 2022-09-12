@@ -196,6 +196,12 @@ input[type="button"] {
         text-decoration: none;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    color: #dddddd;
+    background-color: #dddddd;
+}
 
 @media only screen and (max-width: 1024px) {
     .flex-direction-1024-column {

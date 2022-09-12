@@ -74,6 +74,9 @@ function generateUrl() {
                 ]
             },
             {
+                "type": "divider"
+            },
+            {
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
